@@ -20,8 +20,8 @@ export default function (EventManager, instance) {
     var Recognizer = new Hammer[capitalizeWord(recognizer.gesture)](recognizer.tune);
 
     //recognizeWith
-    if (recognizer.with) {
-      Recognizer.recognizeWith(recognizer.with.map(function(name) {
+    if (recognizer['with']) {
+      Recognizer.recognizeWith(recognizer['with'].map(function(name) {
         return self.Recognizers[capitalizeWord(name)];
       }));
     }
